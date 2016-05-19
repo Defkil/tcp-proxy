@@ -1,0 +1,21 @@
+{
+  "name": "simple-tcp-proxy",
+  "version": "1.0.0",
+  "description": "Simple TCP Proxy",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Defkil/tcp-proxy/"
+  },
+  "keywords": [
+    "tcp-proxy",
+    "tcp",
+    "proxy",
+    "easy"
+  ],
+  "author": "Oliver Grüttner <oliver@node4you.de> (http//npm.node4you.de)",
+  "license": "ISC"
+}
