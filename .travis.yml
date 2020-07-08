@@ -1,5 +1,16 @@
 language: node_js
+
 node_js:
   - lts/*
+  -
+branches:
+  except:
+    - gh-pages
+
 after_success:
   - npm run coverage:coveralls
+  - ./gendoc.sh
+
+env:
+  global:
+    secure: 245a90ef931f6178ee7c30ffd1ab00c64a97fc27
