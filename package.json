@@ -1,11 +1,24 @@
 {
   "name": "simple-tcp-proxy",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Simple TCP Proxy",
-  "main": "app.js",
+  "main": "dist/SimpleTcpProxy.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "babel ./src/**.js -d dist",
+    "test": "mocha --require @babel/register ./test/**.test.js --exit",
+    "coverage": "cross-env NODE_ENV=test nyc 'mocha test/**.test.js --exit'",
+    "coverage:coveralls": "nyc report --reporter=text-lcov | coveralls",
+    "lint": "npm run lint:check",
+    "lint:check": "eslint ./src/**.js ./test/**.test.js -c .eslintrc",
+    "lint:fix": "npm run lint:check -- --fix",
+    "lint:watch": "esw ./src/**.js -c .eslintrc",
+    "jsdoc": "jsdoc -c ./jsdoc.json -t ./node_modules/foodoc/template -R README.md -r ./src/"
   },
+  "files": [
+    "README.md",
+    "/dist/SimpleTcpProxy.js",
+    "/dist/helper.js"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/Defkil/tcp-proxy/"
@@ -13,9 +26,35 @@
   "keywords": [
     "tcp-proxy",
     "tcp",
-    "proxy",
-    "easy"
+    "proxy"
   ],
-  "author": "Oliver Grüttner <oliver@node4you.de> (http//npm.node4you.de)",
-  "license": "ISC"
+  "author": "Oliver Grüttner <npm@olivergruettner.de>",
+  "license": "ISC",
+  "dependencies": {
+    "uuid": "^8.2.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.10.4",
+    "@babel/core": "^7.10.4",
+    "@babel/preset-env": "^7.10.4",
+    "@babel/register": "^7.10.4",
+    "@istanbuljs/nyc-config-babel": "^3.0.0",
+    "babel-plugin-istanbul": "^6.0.0",
+    "chai": "^4.2.0",
+    "coveralls": "^3.1.0",
+    "cross-env": "^7.0.2",
+    "eslint": "^7.1.0",
+    "eslint-config-airbnb": "^18.1.0",
+    "eslint-plugin-babel": "^5.3.0",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-mocha": "^7.0.1",
+    "eslint-plugin-react": "^7.20.0",
+    "eslint-watch": "^7.0.0",
+    "foodoc": "0.0.9",
+    "http-server": "^0.12.3",
+    "mocha": "^8.0.1",
+    "nyc": "^15.1.0",
+    "proxyquire": "^2.1.3"
+  }
 }

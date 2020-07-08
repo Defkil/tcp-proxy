@@ -1,0 +1,11 @@
+{
+  "plugins": ["plugins/markdown"],
+  "opts": {
+    "destination": "./docs/",
+    "template": "./config/jsdoc-template/",
+    "readme": "./README.md"
+  },
+  "templates": {
+   "systemName": "SimpleTcpProxy"
+  }
+}
