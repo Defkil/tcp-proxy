@@ -35,7 +35,7 @@ proxy.start(function(server, client){ // optional callback will be called with e
 
 console.log(proxy.status); // print proxy status (online/offline)
 console.log(proxy.client_con); // print an object with all connections
-console.log(proxy.socket) // print proxy server 
+console.log(proxy.socket) // print proxy server socket
 ```
 
 one line proxy
