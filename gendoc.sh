@@ -29,6 +29,6 @@ git config user.email "travis@travis-ci.org"
 
 git add --all
 git commit -m "Deploy code docs to GitHub Pages Travis build: $TRAVIS_BUILD_NUMBER" -m "Commit: $TRAVIS_COMMIT"
-git push --force "https://${GH_TOKEN}@github.com/${TRAVIS_REPO_SLUG}.git"
+git push --force "https://245a90ef931f6178ee7c30ffd1ab00c64a97fc27@github.com/${TRAVIS_REPO_SLUG}.git"
 
 echo "Documentation successfully published"
