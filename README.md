@@ -43,6 +43,8 @@ one line proxy
 proxy.run({proxy:{host:'127.0.0.1', port:25565}, target:{host:'127.0.0.1', port:25566}})
 ```
 
+all scripts in package.json are not available over npm only over github
+
 ## changed to update 2.0.0
 ```javascript
 // old (v1.0.0) version (won't work!)
