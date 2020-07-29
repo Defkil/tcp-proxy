@@ -1,6 +1,6 @@
 {
   "name": "simple-tcp-proxy",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Simple TCP Proxy",
   "main": "dist/SimpleTcpProxy.js",
   "scripts": {
@@ -12,7 +12,7 @@
     "lint:check": "eslint ./src/**.js ./test/**.test.js -c .eslintrc",
     "lint:fix": "npm run lint:check -- --fix",
     "lint:watch": "esw ./src/**.js -c .eslintrc",
-    "jsdoc": "jsdoc -c ./jsdoc.json -t ./node_modules/foodoc/template -R README.md -r ./src/"
+    "jsdoc": "jsdoc -c jsdoc.json -t ./node_modules/foodoc/template -R README.md -r ./src/"
   },
   "files": [
     "README.md",

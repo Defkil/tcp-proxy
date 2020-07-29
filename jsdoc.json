@@ -1,11 +1,11 @@
 {
   "plugins": ["plugins/markdown"],
   "opts": {
-    "destination": "./docs/",
-    "template": "./config/jsdoc-template/",
-    "readme": "./README.md"
+    "destination": "./docs/"
   },
   "templates": {
-   "systemName": "SimpleTcpProxy"
+   "systemName": "SimpleTcpProxy",
+    "systemSummary": "simple tcp proxy",
+    "copyright": "ISC © Oliver Grüttner"
   }
 }
