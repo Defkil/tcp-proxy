@@ -203,7 +203,7 @@ test('close() closes open connections and stops listening', async (t) => {
   await assert.rejects(connect(port), { code: 'ECONNREFUSED' })
 })
 
-test('close() is safe before start(), twice, and while starting', async () => {
+test('close() is safe at any time and a closed proxy starts again', async () => {
   const proxy = new SimpleTcpProxy({ proxy: { host, port: 0 }, target: { host, port: 1 } })
   await proxy.close()
 
@@ -214,6 +214,11 @@ test('close() is safe before start(), twice, and while starting', async () => {
 
   assert.equal(proxy.status, 'offline')
   assert.equal(proxy.server, undefined)
+
+  await proxy.start()
+  assert.equal(proxy.status, 'online')
+  await proxy.close()
+  assert.equal(proxy.status, 'offline')
 })
 
 test('start() reports the listening state and rejects a second start', async (t) => {
