@@ -1,6 +1,6 @@
 {
   "name": "simple-tcp-proxy",
-  "version": "2.0.2",
+  "version": "3.0.0",
   "description": "Small, dependency-free TCP proxy for Node.js with backpressure, half-close and clean shutdown",
   "keywords": [
     "tcp",
