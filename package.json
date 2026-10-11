@@ -17,7 +17,7 @@
     "url": "git+https://github.com/Defkil/tcp-proxy.git"
   },
   "license": "ISC",
-  "author": "Oliver Grüttner <npm@olivergruettner.de>",
+  "author": "Oliver Grüttner <mail@olivergruettner.de>",
   "type": "commonjs",
   "main": "index.js",
   "types": "index.d.ts",
